@@ -1,0 +1,617 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+}
+
+.header {
+  display: none;
+}
+
+.top {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/top.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: static;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 200px;
+  height: 40px;
+  font-size: 30px;
+  text-align: end;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #999999;
+}
+
+.menu-item {
+  width: 100%;
+  height: auto;
+  padding: .5em 1em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.menu-item a {
+  color: #000000;
+  font-size: 25px;
+}
+
+.menu-item a:hover {
+  color: gray;
+}
+
+.nav {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+.nav.is-active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.nav.close {
+  opacity: 0;
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 18px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+  transform: translateY(20px) rotate(-45deg);
+  z-index: 1;
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+  opacity: 0;
+  z-index: 1;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+  transform: translateY(-20px) rotate(45deg);
+  z-index: 1;
+}
+
+.about {
+  width: 100%;
+  height: 390px;
+  background-color: #f3ece7;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 28px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about p {
+  font-family: serif;
+  font-size: 15px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+
+.about-img img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+
+.menu {
+  width: 100%;
+  height: 390px;
+  background-color: #ebcfc4;
+  text-align: center;
+}
+
+.menu h1 {
+  font-size: 28px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.menu-container {
+  display: flex;
+}
+
+.menu-container img {
+  width: 100px;
+  height: 52.3px;
+}
+
+.menu-container li {
+  margin: 8px;
+}
+
+.menu-container li p {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.menu-title {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.menu-about {
+  font-size: 8px;
+  font-family: serif;
+}
+
+.styles {
+  width: 100%;
+  height: 390px;
+  background-color: #f3ece7;
+  text-align: center;
+}
+
+.styles h1 {
+  font-size: 28px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.styles ul {
+  flex-wrap: wrap;
+}
+
+.styles img {
+  width: 100px;
+  height: 100px;
+}
+
+.styles ul li:nth-child(5) {
+  display: none;
+}
+
+.styles ul li:nth-child(6) {
+  display: none;
+}
+
+.styles {
+  width: 100%;
+  height: 390px;
+  background-color: #f3ece7;
+  text-align: center;
+}
+
+.styles li {
+  margin: 20px;
+}
+
+.shopinfo {
+    width: 100%;
+    height: 390px;
+    background-color: #d3c4be;
+    text-align: center;
+}
+
+.shopinfo h1 {
+  font-size: 28px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.clearfix {
+  display: block;
+  width: 220px;
+  margin: auto;
+}
+
+.clearfix li {
+  display: flex;
+  font-family: serif;
+  font-size: 15px;
+  /* justify-content: space-between; */
+}
+
+.info-item {
+  width: 80px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+.info-about {
+  width: 120px;
+  text-align: start;
+  font-size: 13px;
+}
+
+.shop-img {
+  margin-top: 15px;
+}
+
+.shop-img img {
+  width: 110px;
+  margin: 20px;
+  margin-top: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 30px;
+  background-color: #999999;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer p {
+  padding-top: 7px;
+  color: #ffffff;
+}
+
+@media  screen and (min-width: 600px) {
+  
+  .top {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    font-size: 40px;
+  }
+
+  .about, .menu, .styles, .shopinfo {
+    width: 100%;
+    height: 600px;
+  }
+
+  .about h1, .menu h1, .styles h1, .shopinfo h1 {
+    font-size: 35px;
+  }
+
+  .about p {
+    font-size: 25px;
+  }
+
+  .about-img img {
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    margin-top: 45px;
+  }
+
+  .menu-container {
+    display: flex;
+  }
+  
+  .menu-container img {
+    width: 200px;
+    height: 104.6px;
+  }
+  
+  .menu-container li {
+    margin: 8px;
+  }
+  
+  .menu-container li p {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .menu-title {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  
+  .menu-about {
+    font-size: 15px;
+    font-family: serif;
+  }
+
+  .styles img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .styles ul li:nth-child(5) {
+    display: block;
+  }
+  
+  .styles ul li:nth-child(6) {
+    display: block;
+  }
+
+  .clearfix {
+    display: block;
+    width: 700px;
+    margin: auto;
+    
+  }
+  
+  .clearfix li {
+    display: flex;
+    font-family: serif;
+    font-size: 25px;
+  }
+  
+  .info-item {
+    width: 100px;
+    text-align: start;
+    margin-left: 200px;
+  }
+  
+  .info-about {
+    width: 180px;
+    text-align: start;
+    font-size: 20px;
+    margin-left: 80px;
+    padding: 5px;
+  }
+  
+  .shop-img {
+    margin-top: 15px;
+  }
+  
+  .shop-img img {
+    width: 180px;
+    margin: 20px;
+    margin-top: 10px;
+  }
+  
+  footer {
+    width: 100%;
+    height: 50px;
+    background-color: #999999;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  footer p {
+    padding-top: 18px;
+  }
+  
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  
+  .header {
+    display: block;
+    width: 100%;
+    height: 80px;
+    background-color: #f3ece7;
+    display: flex;
+    position: relative;
+  }
+
+  .nav-desktop {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    /* padding-right: 10px; */
+  }
+
+  .desk-item {
+    padding-top: 25px;
+    cursor: pointer;
+  }
+
+  .desk-item a {
+    font-size: 30px;
+  }
+
+  .desk-item a:hover {
+    color: gray;
+  }
+
+  .top {
+    width: 100%;
+    height: 944px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .logo-desktop {
+    width: 300px;
+    padding-top: 13px;
+    padding-left: 20px;
+    font-size: 50px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menu-trigger {
+    display: none;
+  }
+
+  .about, .menu, .styles, .shopinfo {
+    width: 100%;
+    height: 944px;
+  }
+
+  .about h1, .menu h1, .styles h1, .shopinfo h1 {
+    font-size: 50px;
+    padding: 55px;
+  }
+
+  .about p {
+    font-size: 35px;
+    padding: 40px;
+  }
+
+  .about-img img {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    margin-top: 0;
+  }
+
+  .menu-container {
+    display: flex;
+  }
+  
+  .menu-container img {
+    width: 400px;
+    height: 209.2px;
+  }
+  
+  .menu-container li {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  
+  .menu-container li p {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .menu-title {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  
+  .menu-about {
+    font-size: 25px;
+    font-family: serif;
+  }
+
+  .styles img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .styles ul li:nth-child(5) {
+    display: block;
+  }
+  
+  .styles ul li:nth-child(6) {
+    display: block;
+  }
+
+  .clearfix {
+    display: block;
+    width: 900px;
+    margin: auto;
+    
+  }
+  
+  .clearfix li {
+    display: flex;
+    font-family: serif;
+    font-size: 35px;
+  }
+  
+  .info-item {
+    width: 200px;
+    text-align: start;
+    margin-left: 240px;
+  }
+  
+  .info-about {
+    width: 200px;
+    text-align: start;
+    font-size: 25px;
+    margin-left: 80px;
+    padding: 5px;
+  }
+  
+  .shop-img {
+    margin-top: 15px;
+  }
+  
+  .shop-img img {
+    width: 270px;
+    margin: 30px;
+    margin-top: 40px;
+  }
+  
+  footer {
+    width: 100%;
+    height: 80px;
+    background-color: #999999;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  footer p {
+    padding-top: 20px;
+  }
+  
+
+}
