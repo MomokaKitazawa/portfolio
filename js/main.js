@@ -1,14 +1,5 @@
 'use strict';
 
-var pw;
-
-pw = prompt("パスワードを入力してください","");
-
-if (pw == "tKdg4h6jkl"){
-   location.href = pw+"index.html";
-}else{
-  alert("パスワードが違います");
-}
 
 const scroll_to_top_btn = document.querySelector('#scroll-to-top-btn');
 
